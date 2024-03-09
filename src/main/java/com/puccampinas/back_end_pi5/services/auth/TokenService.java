@@ -15,28 +15,28 @@ public class TokenService {
 
 public String generateToken(User user) {
     try {
-        var algorithm = Algorithm.HMAC256("123456");
+        var algorithm = Algorithm.HMAC256("${env.HASHCODE}");
         return JWT.create()
-                .withIssuer("API EASY AGRO")
+                .withIssuer("API PROJECT 5")
                 .withSubject(String.valueOf(user.getId()))
                 .withExpiresAt(LocalDateTime.now().plusHours(2).toInstant(ZoneOffset.of("-03:00")))
                 .sign(algorithm);
     } catch (JWTCreationException exception){
-        throw new RuntimeException("erro ao gerar token jwt", exception);
+        throw new RuntimeException("error generating jwt token", exception);
     }
 }
 
 
     public String getSubject(String tokenJWT) {
         try {
-            var algorithm = Algorithm.HMAC256("123456");
+            var algorithm = Algorithm.HMAC256("${env.HASHCODE}");
             return JWT.require(algorithm)
-                    .withIssuer("API EASY AGRO")
+                    .withIssuer("API PROJECT 5")
                     .build()
                     .verify(tokenJWT)
                     .getSubject();
         } catch (JWTVerificationException exception) {
-            throw new RuntimeException("Token JWT inválido ou expirado!");
+            throw new RuntimeException("Invalid or expired JWT token!");
         }
     }
 }

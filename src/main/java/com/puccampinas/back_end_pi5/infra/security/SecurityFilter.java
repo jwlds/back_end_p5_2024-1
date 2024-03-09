@@ -29,7 +29,6 @@ public class SecurityFilter extends OncePerRequestFilter {
         if(tokenJWT != null){
 
 
-            System.out.println("FOI");
             var subject = tokenService.getSubject(tokenJWT);
             var user = userRepository.findUserById(Long.parseLong(subject));
 

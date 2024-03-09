@@ -2,11 +2,10 @@ package com.puccampinas.back_end_pi5.controllers.auth;
 
 
 import com.puccampinas.back_end_pi5.domain.user.User;
-import com.puccampinas.back_end_pi5.dtos.ApiResponse;
 import com.puccampinas.back_end_pi5.dtos.auth.AuthenticationDTO;
 import com.puccampinas.back_end_pi5.dtos.auth.JWTokenDTO;
 import com.puccampinas.back_end_pi5.services.auth.TokenService;
-import com.puccampinas.back_end_pi5.services.auth.UserService;
+import com.puccampinas.back_end_pi5.services.UserService;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;

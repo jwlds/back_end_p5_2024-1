@@ -1,4 +1,4 @@
-package com.puccampinas.back_end_pi5.services.auth;
+package com.puccampinas.back_end_pi5.services;
 
 
 import com.puccampinas.back_end_pi5.domain.user.User;
