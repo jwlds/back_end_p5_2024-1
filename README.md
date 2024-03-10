@@ -1,0 +1,1 @@
+O back-end do projeto de controle de receitas tem como objetivo permitir que os usuários acessem a plataforma para gerar receitas baseadas em inteligência artificial, considerando ingredientes e parâmetros definidos pelo usuário. Além disso, os usuários poderão compartilhar suas receitas com a comunidade.
