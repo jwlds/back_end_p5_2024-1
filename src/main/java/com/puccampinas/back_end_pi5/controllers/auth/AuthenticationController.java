@@ -46,12 +46,5 @@ public class AuthenticationController {
         }
     }
 
-//    @PatchMapping("/password/{id}")
-//    public ResponseEntity<ApiResponse<String>> updatePassword(@PathVariable int id, @RequestBody String password) {
-//        String updatedPassword = userService.updatePassword(password, id);
-//        ApiResponse<String> response = new ApiResponse<>(HttpStatus.OK.value(), "Password updated successfully", updatedPassword);
-//        return new ResponseEntity<>(response, HttpStatus.OK);
-//    }
-
 }
 

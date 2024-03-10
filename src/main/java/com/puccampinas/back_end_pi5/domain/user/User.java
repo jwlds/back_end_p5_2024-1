@@ -3,27 +3,27 @@ package com.puccampinas.back_end_pi5.domain.user;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.puccampinas.back_end_pi5.dtos.UserDTO;
-import jakarta.persistence.*;
 import lombok.*;
+import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
+import javax.persistence.Id;
 import java.time.LocalDateTime;
 import java.util.Collection;
 import java.util.List;
 
-@AllArgsConstructor
-@NoArgsConstructor
+@Document(collection="users")
 @Getter
 @Setter
-@Entity
-@Table(name = "users")
+@NoArgsConstructor
+@AllArgsConstructor
+@Data
 public class User implements UserDetails {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long id;
+    private String id;
     private String login;
     private String password;
     private String email;
